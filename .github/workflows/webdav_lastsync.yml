@@ -13,7 +13,7 @@ jobs:
       - name: Fix
         run: |
           export SYNCFILE="lastsync.txt"
-          export REMOTEFILE="https://app.koofr.net/dav/Koofr/zotero/${SYNCFILE}"
+          export REMOTEFILE="https://app.koofr.net/dav/OneDrive/zotero/${SYNCFILE}"
           touch ${SYNCFILE}
           curl -u ${KOOFR_EMAIL}:${KOOFR_DAVPASS} -T ${SYNCFILE} ${REMOTEFILE}
         env:
